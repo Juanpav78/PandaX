@@ -1,0 +1,43 @@
+.skills{
+    background-color: var(--c--red--black) ;
+    min-height: 100vh;
+}
+
+.contenedor__skills{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+
+
+.subtitle{
+    font-size: 1.8em;
+}
+
+.text{
+    font-size: 1.2em;
+}
+
+.contenedor_services{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 2em;
+}
+.card{
+    padding: 1em;
+    min-height: 20em;
+}
+.tecnologias{
+    padding: 1em;
+    min-height: 20em;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    align-items: center;
+    justify-items: center;
+    gap: 2em;
+}
+
+.tecnologias img{
+    width: 3.8em;
+}

@@ -1,0 +1,46 @@
+.header{
+    height: 7.5em;
+    background-color: var(--ct--red--black);
+    position: fixed;
+    box-shadow: 0 5px 10px var(--c--red--black);
+    width: 100%;
+    display: flex;
+    z-index: 1;
+}
+.contenedor__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logotipo{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.logo{
+    color: aliceblue;
+    width: 5em;
+}
+.title{
+    font-size: 2.5em;
+    padding: 0;
+}
+.nav{
+
+}
+.link{
+    font-size: 1em;
+    padding: 1em;
+    transition: color .3s ease;
+}
+
+.link:hover{
+    color: var(--c--red--primary);
+    transition: .3s ease;
+}
+
+@media (max-width: 900px) {
+    .contenedor__header{
+       flex-direction: column;
+    }
+}

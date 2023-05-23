@@ -1,0 +1,20 @@
+.blogs{
+    min-height: 100vh;
+    background: var(--c--red--primary--dark);
+}
+
+.contenedor__blogs{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.blog{
+    height: 20em;
+}
+
+.btn{
+    display: block;
+    width: 15em;
+    margin: 0 auto;
+}

@@ -1,69 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,600&family=Permanent+Marker&display=swap');
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --c--red--primary :         #E24A2E;
+  --c--red--primary--dark :   #BA3722;
+  --c--red--secondary :       #922517;
+  --c--red--secondary--dark : #6A120B;
+  --c--red--black:            #420000;
+  --c--white :                #ffffff;
+  --c--white--dark :          #d1d1d1;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --ct--red--black:            rgba(66, 0, 0, 0.75);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --f--title: 'Permanent Marker', cursive;
+  --f--text:  'Josefin Sans', sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+h1, h2, h3 {
+  font-family: var(--f--title);
+  color: var(--c--white);
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding-bottom: 1em;
+  text-align: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a, p, select, input, textarea, button{
+  text-decoration: none;
+  color: var(--c--white);
+  font-family: var(--f--text);
+  font-size: 1.2em;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+section, main{
+  padding: 1.5em 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.contenedor{
+  width: calc(100% - 4px) ;
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+.title{
+  font-size: 4em;
+}
+
+.style, .style--b{
+  background: linear-gradient(180deg, var(--c--red--secondary--dark) 0%, rgba(0, 0, 255, 0) 100%);
+}
+.style--b{
+  border: 2px solid var(--c--red--primary);
+}
+
+.btn{
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
 }
