@@ -1,25 +1,93 @@
 import styles from "../styles/skills.module.css"
-
-import img1 from "../assets/logos/001-design.png"
-import img2 from "../assets/logos/002-illustrator.png"
-import img3 from "../assets/logos/003-html.png"
-import img4 from "../assets/logos/004-css-3.png"
-import img5 from "../assets/logos/005-js.png"
-import img6 from "../assets/logos/006-figma.png"
-import img7 from "../assets/logos/007-leaf.png"
-import img8 from "../assets/logos/008-sass.png"
-import img9 from "../assets/logos/009-bootstrap.png"
-import img10 from "../assets/logos/010-physics.png"
-import img11 from "../assets/logos/011-node-js.png"
-import img12 from "../assets/logos/012-paint-palette.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHtml5,
+  faFigma, faGithub,
+  faBootstrap, faGit,
+  faNodeJs, faReact,
+  faJsSquare, faSass,
+  faWordpress, faPhp,
+  faAws,faAngular, faVuejs, faCss3Alt
+} from "@fortawesome/free-brands-svg-icons"
+import illustrator from "../assets/logos/illustrator.png"
+import photoshop from "../assets/logos/photoshop.png"
 
 const logos = [
-  img1, img2,
-  img3, img4,
-  img5, img6,
-  img7, img8,
-  img9, img10,
-  img11, img12,
+    {
+    logo : faHtml5,
+    class  : "logo--orange" ,
+    name : "html5"
+    },
+    {
+      logo : faCss3Alt,
+      class  : "logo--blue" ,
+      name : "html5"
+    },
+    {
+      logo : faJsSquare,
+      class  : "logo--yellow" ,
+      name : "html5"
+    },
+    {
+      logo : faGithub,
+      class  : "logo--black" ,
+      name : "html5"
+    },
+    {
+    logo : faGit,
+    class  : "logo--orange--git" ,
+    name : "html5"
+    },
+    {
+    logo : faNodeJs,
+    class  : "logo--green--node" ,
+    name : "html5"
+    },
+    {
+    logo : faBootstrap,
+    class  : "logo--purple--b" ,
+    name : "html5"
+    },
+    {
+    logo : faSass,
+    class  : "logo--pink" ,
+    name : "html5"
+    },
+    {
+      logo : faWordpress,
+      class  : "logo--blue--w" ,
+      name : "html5"
+    },
+    {
+      logo : faPhp,
+      class  : "logo--purple--php" ,
+      name : "html5"
+    },
+    {
+    logo : faReact,
+    class  : "logo--blue--r" ,
+    name : "html5"
+    },
+    {
+    logo : faAws,
+    class  : "logo--black" ,
+    name : "html5"
+    },
+        {
+    logo : faAngular,
+    class  : "logo--red" ,
+    name : "html5"
+    },
+    {
+      logo : faVuejs,
+      class  : "logo--green--vue" ,
+      name : "html5"
+    },
+    {
+      logo : faFigma,
+      class  : "logo--black" ,
+      name : "html5"
+    }
+
 ]
 
 const msg = {
@@ -57,8 +125,10 @@ const Skills = () => {
 
         <div className={"style--b " + styles.tecnologias}>
           {logos.map((logo, i) =>(
-            <img key={i} src={logo} alt="" />
+            <FontAwesomeIcon className={styles.logos + " " +logo.class} key={i} icon={logo.logo} alt={logo.name} />
           ))}
+          <img className={styles.logos__img} src={illustrator} alt="adobe illustrator" />
+          <img className={styles.logos__img} src={photoshop} alt="adobe photoshop" />
         </div>
       </div>
     </section>

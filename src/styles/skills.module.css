@@ -41,6 +41,11 @@
     gap: 2em;
 }
 
-.tecnologias img{
-    width: 3.8em;
+.logos{
+    font-size: 4em;
+    filter:drop-shadow(0 0 3px var(--c--red--black));
+}
+
+.logos__img{
+    width: 4em;
 }

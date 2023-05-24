@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,600&family=Permanent+Marker&display=swap');
+@import "./styles/colors.css";
+
 :root {
   --c--red--primary :         #E24A2E;
   --c--red--primary--dark :   #BA3722;
@@ -47,7 +49,7 @@ section, main{
   background: linear-gradient(180deg, var(--c--red--secondary--dark) 0%, rgba(0, 0, 255, 0) 100%);
 }
 .style--b{
-  border: 2px solid var(--c--red--primary);
+  border: 1.5px solid var(--c--red--primary);
 }
 
 .btn{

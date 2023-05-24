@@ -1,56 +1,39 @@
 import { Link } from "react-router-dom"
-import styles from "../styles/proyects.module.css"
 
+import { useState } from "react"
+import Modal from "../components/Modal.jsx"
+import styles from "../styles/proyects.module.css"
+import proyectos from "../mocks/proyecto.json"
 const Proyects = () => {
+  const [modal, setModal] = useState(false)
+
+  const handleClick = (e)=>{
+    e.preventDefault()
+    console.log(e.target.id)
+    if(modal){
+      setModal(false)
+    }else{
+      setModal(true)
+    }
+  }
   return (
     <main  className={styles.proyects}>
         <h2 className="title">Proyects</h2>
 
         <div className={"contenedor " +styles.contenedor__proyects}>
-          <div className={"style--b "+styles.card}>
-            <img className={styles.img} src="/src/assets/proyectos/PrPortafolio2.png" alt="" />
+          {proyectos.map((proy, i )=>(
+          <div id={proy.titulo} key={i} className={"style--b "+styles.card} onClick={e => handleClick(e)}>
+            <img className={styles.img} src={proy.imagen} alt={proy.titulo} />
             <div className={styles.text}>
-              <h3 className={styles.title}>portafolio title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. </p>
-
+              <h3 className={styles.title}>{proy.titulo}</h3>
               </div>
+            <p className={styles.type}>{proy.tipo}</p>
+            {modal && (
+            <Modal  info={proy} />
+            )}
           </div>
-          <div className={"style--b "+styles.card}>
-            <img className={styles.img} src="/src/assets/proyectos/PrGateaux.png" alt="" />
-            <div className={styles.text}>
-              <h3 className={styles.title}>portafolio title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. </p>
-
-              </div>
-          </div>
-          <div className={"style--b "+styles.card}>
-            <img className={styles.img} src="/src/assets/proyectos/PrPokemon.png" alt="" />
-            <div className={styles.text}>
-              <h3 className={styles.title}>portafolio title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. </p>
-
-              </div>
-          </div>
-          <div className={"style--b "+styles.card}>
-            <img className={styles.img} src="/src/assets/proyectos/PrReact01.png" alt="" />
-            <div className={styles.text}>
-              <h3 className={styles.title}>portafolio title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. </p>
-
-              </div>
-          </div>
-          <div className={"style--b "+styles.card}>
-            <img className={styles.img} src="/src/assets/proyectos/PrReact02.png" alt="" />
-            <div className={styles.text}>
-              <h3 className={styles.title}>portafolio title</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. </p>
-
-              </div>
-          </div>
-          <div className={"style--b "+styles.card}>
-            <img className={styles.img} src="/src/assets/proyectos/PrHelado.png" alt="" />
-          </div>
-
+          ))}
+          
         <Link to="/" className={"style--b btn " + styles.btn}>Ver más</Link>
         </div>
     </main>
