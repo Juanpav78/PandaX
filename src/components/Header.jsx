@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import styles from "../styles/header.module.css"
 import logo from "../assets/LogoPandaXBlanco.svg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Header = () => {
   return (
     <header className={styles.header}>
@@ -16,6 +17,9 @@ const Header = () => {
           <Link className={styles.link} to="/">About Me</Link>
           <Link className={styles.link} to="/">Blogs</Link>
           <Link className={styles.link} to="/">Contact</Link>
+          <Link className={styles.link} to="/">
+          <FontAwesomeIcon  />
+          </Link>
         </nav>
       </div>
     </header>

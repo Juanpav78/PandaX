@@ -23,9 +23,9 @@ const logos = [
 ]
 
 const msg = {
-  diseno: "Diseño personalizado",
-  web: "Desarrollo web, con sitios webs dinamicos, ",
-  mantenimiento:"Mantenimieno de los sitios webs para optimizar el rendimiento, resolver necesidades"
+  diseno: "Diseño personalizado que implica la creación de la apariencia visual y la estructura de un sitio, incluyendo la disposición de elementos, la selección de colores y tipografías, y la creación de una interfaz de usuario intuitiva que se adapte tanto para el usuario como para el cliente",
+  web: "Se realizan sitios o aplicaciones webs dinamicos, utilizando lenguajes de programación como HTML, CSS, JavaScript, React, entre otros, desarrollando asi la codificación de las funcionalidades del sitio, como formularios, bases de datos y sistemas de gestión de contenido.",
+  mantenimiento:"Actualización y el monitoreo continuo del sitio para garantizar su funcionamiento óptimo, la corrección de errores, la aplicación de parches de seguridad y la mejora de la experiencia del usuario"
 }
 
 

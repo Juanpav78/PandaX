@@ -12,11 +12,13 @@
 
 
 .subtitle{
+    padding: 1em 0;
     font-size: 1.8em;
 }
 
 .text{
     font-size: 1.2em;
+    font-weight: 300;
 }
 
 .contenedor_services{
@@ -27,6 +29,7 @@
 .card{
     padding: 1em;
     min-height: 20em;
+    text-align: center;
 }
 .tecnologias{
     padding: 1em;

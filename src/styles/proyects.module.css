@@ -14,5 +14,19 @@
 }
 
 .card{
-    height: 22em;
+    min-height: 22em;
+}
+
+.img{
+    width: 100%;
+}
+.text{
+    padding: .5em;
+}
+.text .title{
+    padding: 0;
+}
+
+.text p{
+    font-size: 1em;
 }

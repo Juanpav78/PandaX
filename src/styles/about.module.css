@@ -15,7 +15,22 @@
     background: linear-gradient(180deg, var(--c--red--primary)0%, var(--c--red--secondary) 100%);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    overflow: hidden;
 }
 .info{
     aspect-ratio: 1 / 1;
+    padding: 2em;
+    text-align: justify;
+}
+
+.title{
+    padding: 1em;
+    font-size: 2em;
+}
+
+.img{
+    position: relative;
+    left: 2.5rem;
+    width: 80%;
+    filter: opacity(.9);
 }
