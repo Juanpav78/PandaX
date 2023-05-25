@@ -1,9 +1,7 @@
-import React from 'react'
-
-const Modal = ({info}) => {
+const Modal = ({info, fun}) => {
     const {tipo} = info
   return (
-    <div>modal{tipo}</div>
+    <div onClick={fun}>modal{tipo}</div>
   )
 }
 

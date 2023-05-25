@@ -5,16 +5,37 @@ import Modal from "../components/Modal.jsx"
 import styles from "../styles/proyects.module.css"
 import proyectos from "../mocks/proyecto.json"
 const Proyects = () => {
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState({
+    "isModal": false,
+    "proyecto" : {},
+    "key" : null
+  })
 
-  const handleClick = (e)=>{
+  const handleClick = (e, proy, o)=>{
     e.preventDefault()
-    console.log(e.target.id)
-    if(modal){
-      setModal(false)
+    if(modal.isModal){
+      setModal({
+        "isModal": false,
+        "proyecto" : {},
+        "key" : null
+      })
     }else{
-      setModal(true)
+      setModal({
+        "isModal": true,
+        "proyecto" : proy,
+        "key" : o
+      })
     }
+  }
+
+  const closeModal = ()=>{
+    setModal({
+      "isModal": false,
+      "proyecto" : {},
+      "key" : null
+    })
+
+    console.log("cerrar")
   }
   return (
     <main  className={styles.proyects}>
@@ -22,16 +43,17 @@ const Proyects = () => {
 
         <div className={"contenedor " +styles.contenedor__proyects}>
           {proyectos.map((proy, i )=>(
-          <div id={proy.titulo} key={i} className={"style--b "+styles.card} onClick={e => handleClick(e)}>
+            
+          <a id={proy.titulo} key={i} className={"style--b "+styles.card} onClick={e => handleClick(e, proy, i)}>
             <img className={styles.img} src={proy.imagen} alt={proy.titulo} />
             <div className={styles.text}>
               <h3 className={styles.title}>{proy.titulo}</h3>
               </div>
             <p className={styles.type}>{proy.tipo}</p>
-            {modal && (
-            <Modal  info={proy} />
+            {modal.key==i && (
+            <Modal info={modal.proyecto} fun={closeModal} />
             )}
-          </div>
+          </a>
           ))}
           
         <Link to="/" className={"style--b btn " + styles.btn}>Ver más</Link>
