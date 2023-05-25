@@ -12,14 +12,7 @@ const Proyects = () => {
   })
 
   const handleClick = (e, proy, o)=>{
-    e.preventDefault()
-    if(modal.isModal){
-      setModal({
-        "isModal": false,
-        "proyecto" : {},
-        "key" : null
-      })
-    }else{
+    if(!modal.isModal){
       setModal({
         "isModal": true,
         "proyecto" : proy,

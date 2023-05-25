@@ -1,6 +1,6 @@
 .proyects{
     background: linear-gradient(180deg, var(--c--red--black) 0%, var(--c--red--secondary) 100%);
-    min-height: 100vh;
+
 }
 
 .contenedor__proyects{
