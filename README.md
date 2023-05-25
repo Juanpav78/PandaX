@@ -1,2 +1,0 @@
-# PandaX
-Portafolio Web

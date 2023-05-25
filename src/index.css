@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,600&family=Permanent+Marker&display=swap');
+@import "./styles/colors.css";
+
+:root {
+  --c--red--primary :         #E24A2E;
+  --c--red--primary--dark :   #BA3722;
+  --c--red--secondary :       #922517;
+  --c--red--secondary--dark : #6A120B;
+  --c--red--black:            #420000;
+  --c--white :                #ffffff;
+  --c--white--dark :          #d1d1d1;
+
+  --ct--red--black:            rgba(66, 0, 0, 0.75);
+
+  --f--title: 'Permanent Marker', cursive;
+  --f--text:  'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--f--title);
+  color: var(--c--white);
+  margin: 0;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+a, p, select, input, textarea, button{
+  text-decoration: none;
+  color: var(--c--white);
+  font-family: var(--f--text);
+  font-size: 1.2em;
+}
+
+section, main{
+  padding: 1.5em 0;
+  min-height: 40vh;
+}
+
+.contenedor{
+  width: calc(100% - 4px) ;
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+.title{
+  font-size: 4em;
+}
+
+.style, .style--b{
+  background: linear-gradient(180deg, var(--c--red--secondary--dark) 0%, rgba(0, 0, 255, 0) 100%);
+}
+.style--b{
+  border: 1.5px solid var(--c--red--primary);
+}
+
+.btn{
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}

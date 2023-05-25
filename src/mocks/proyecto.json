@@ -1,0 +1,47 @@
+[
+    {
+        "titulo": "title proyect",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. ",
+        "imagen": "/src/assets/proyectos/PrPortafolio2.png" ,
+        "tipo": "diseño" ,
+        "link": "https://www.google.co.ve/"
+    },
+    {
+        "titulo": "title proyect",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. ",
+        "imagen": "/src/assets/proyectos/PrGateaux.png" ,
+        "tipo": "clon" ,
+        "link": "https://www.google.co.ve/"
+    },
+    {
+        "titulo": "title proyect",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. ",
+        "imagen": "/src/assets/proyectos/PrPokemon.png" ,
+        "tipo": "frontend" ,
+        "link": "https://www.google.co.ve/"
+    },
+    {
+        "titulo": "title proyect",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. ",
+        "imagen": "/src/assets/proyectos/PrReact01.png" ,
+        "tipo": "completa" ,
+        "link": "https://www.google.co.ve/",
+        "git": "https://www.github.com"
+    },
+    {
+        "titulo": "title proyect",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. ",
+        "imagen": "/src/assets/proyectos/PrReact02.png" ,
+        "tipo": "frontend" ,
+        "link": "https://www.google.co.ve/",
+        "git": "https://www.github.com"
+    },
+    {
+        "titulo": "title proyect",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam reiciendis, quaerat accusamus ea, ipsa laboriosam labore numquam ad veniam facere unde modi earum voluptatum repellendus quasi totam consectetur asperiores officia. ",
+        "imagen": "/src/assets/proyectos/PrHelado.png" ,
+        "tipo": "diseño" ,
+        "link": "https://www.google.co.ve/",
+        "git": "https://www.github.com"
+    }
+]

@@ -1,0 +1,53 @@
+.home{
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(180deg, var(--c--red--primary) 0%, var(--c--red--black) 100%);
+    overflow: hidden;
+}
+
+.home__contain{
+    
+}
+
+.sun__contain{
+    display: grid;
+    position: relative;
+    bottom: calc(-100% + 1em) ;
+    margin: 0 auto;
+    width: 2em; 
+    height: 2em;
+    align-content: center;
+    justify-content: center;
+
+}
+
+ .sun__contain .sun{
+    display: block;
+    aspect-ratio: 1/1 ;
+    width: 60vw;
+    min-width: 22em;
+    margin: auto;
+    background: linear-gradient(180deg, var(--c--red--primary) 0%, var(--c--red--black) 60%);
+
+    border-radius: 50%;
+
+}
+
+.montains__contain{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.montains{
+    position: relative;
+    bottom: calc(-100% + 30em) ;
+    background-image: url('/src/assets/montanas.png') ;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    width: 100%;
+    height: 30em;
+}
