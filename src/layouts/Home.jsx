@@ -2,7 +2,7 @@ import styles from "../styles/home.module.css"
 
 const Home = () => {
   return (
-    <section className={styles.home}>
+    <section className={styles.home} id="home">
       <div className={styles.sun__contain}>
       <div className={styles.sun}></div>
       </div>

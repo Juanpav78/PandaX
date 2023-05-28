@@ -10,6 +10,7 @@ import { faHtml5,
 } from "@fortawesome/free-brands-svg-icons"
 import illustrator from "../assets/logos/illustrator.png"
 import photoshop from "../assets/logos/photoshop.png"
+import { useEffect } from "react"
 
 const logos = [
     {
@@ -98,8 +99,22 @@ const msg = {
 
 
 const Skills = () => {
+
+  
+  useEffect(()=>{
+    const div = document.getElementById("skills")
+    const handleScroll = () => {
+      if(div.offsetTop - 800 < window.scrollY){
+        div.classList.add("active")
+      }else{
+        div.classList.remove("active")
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <section className={styles.skills}>
+    <section className={styles.skills} id="skills">
       <h2 className="title">Skills</h2>
       <div className={"contenedor " + styles.contenedor__skills}>
         <div className={styles.contenedor_services}>

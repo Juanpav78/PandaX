@@ -37,7 +37,6 @@ section, main{
 }
 
 .contenedor{
-  width: calc(100% - 4px) ;
   max-width: 75em;
   margin: 0 auto;
 }

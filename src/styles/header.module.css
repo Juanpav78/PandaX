@@ -1,16 +1,18 @@
 .header{
-    height: 7.5em;
-    background-color: var(--ct--red--black);
-    position: fixed;
-    box-shadow: 0 5px 10px var(--c--red--black);
     width: 100%;
-    display: flex;
+   
+    position: fixed;
     z-index: 1;
+
+    background-color: var(--ct--red--black);
+    box-shadow: 0 5px 10px var(--c--red--black);
+
 }
 .contenedor__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em 0;
 }
 .logotipo{
     display: flex;

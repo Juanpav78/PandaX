@@ -7,7 +7,7 @@ const info =[
 ]
 const AboutMe = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <h2 className="title">About Me</h2>
       <div className={"contenedor " + styles.contenedor__about}>
         <div className={styles.perfil}>

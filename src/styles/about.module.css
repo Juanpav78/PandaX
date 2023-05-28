@@ -7,19 +7,22 @@
 
 .contenedor__about{
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
     align-items: center;
+    justify-items: center;
     gap: 2em;
+    width: 100%;
+    
 }
 .perfil{
     background: linear-gradient(180deg, var(--c--red--primary)0%, var(--c--red--secondary) 100%);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
+    width: 100%;
 }
 .info{
-    aspect-ratio: 1 / 1;
-    padding: 2em;
+    padding: 1.5em;
     text-align: justify;
 }
 

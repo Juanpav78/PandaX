@@ -27,17 +27,15 @@ const Proyects = () => {
       "proyecto" : {},
       "key" : null
     })
-
-    console.log("cerrar")
   }
   return (
-    <main  className={styles.proyects}>
+    <main  className={styles.proyects} id="proyects">
         <h2 className="title">Proyects</h2>
 
         <div className={"contenedor " +styles.contenedor__proyects}>
           {proyectos.map((proy, i )=>(
             
-          <a id={proy.titulo} key={i} className={"style--b "+styles.card} onClick={e => handleClick(e, proy, i)}>
+          <div id={proy.titulo} key={i} className={"style--b "+styles.card} onClick={e => handleClick(e, proy, i)}>
             <img className={styles.img} src={proy.imagen} alt={proy.titulo} />
             <div className={styles.text}>
               <h3 className={styles.title}>{proy.titulo}</h3>
@@ -46,7 +44,7 @@ const Proyects = () => {
             {modal.key==i && (
             <Modal info={modal.proyecto} fun={closeModal} />
             )}
-          </a>
+          </div>
           ))}
           
         <Link to="/" className={"style--b btn " + styles.btn}>Ver más</Link>

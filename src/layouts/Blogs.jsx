@@ -2,7 +2,7 @@ import styles from "../styles/blogs.module.css"
 import { Link } from "react-router-dom"
 const Blogs = () => {
   return (
-    <section className={styles.blogs}>
+    <section className={styles.blogs} id="blogs">
       <h2 className="title">Blogs</h2>
       <div className={"contenedor " + styles.contenedor__blogs}>
         <div className={"style--b "+styles.blog}></div>

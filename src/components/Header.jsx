@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-scroll";
+import { Link  as Nv} from "react-router-dom";
 import styles from "../styles/header.module.css"
 import logo from "../assets/LogoPandaXBlanco.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,15 +13,46 @@ const Header = () => {
             <h1 className={styles.title} >PandaX {"/>"}</h1>
         </Link>
         <nav className={styles.nav}>
-          <Link className={styles.link} to="/">Home</Link>
-          <Link className={styles.link} to="/">Skills</Link>
-          <Link className={styles.link} to="/">Proyects</Link>
-          <Link className={styles.link} to="/">About Me</Link>
-          <Link className={styles.link} to="/">Blogs</Link>
-          <Link className={styles.link} to="/">Contact</Link>
-          <Link className={styles.link} to="/">
+          <Link 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={styles.link} to="home">Home</Link>
+          <Link 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={styles.link} to="skills">Skills</Link>
+          <Link 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={styles.link} to="proyects">Proyects</Link>
+          <Link 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={styles.link} to="about">About Me</Link>
+          <Link 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={styles.link} to="blogs">Blogs</Link>
+          <Link 
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={styles.link} to="contact">Contact</Link>
+          <Nv
+          className={styles.link} to="/login">
           <FontAwesomeIcon  icon={faUser} />
-          </Link>
+          </Nv>
         </nav>
       </div>
     </header>
