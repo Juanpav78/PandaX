@@ -1,59 +1,23 @@
-import { Link } from "react-scroll";
-import { Link  as Nv} from "react-router-dom";
+//Dependencias
+import { Link } from "react-router-dom"; 
+//Estilos e imagenes
 import styles from "../styles/header.module.css"
 import logo from "../assets/LogoPandaXBlanco.svg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from "@fortawesome/free-solid-svg-icons/faUser"
+//Componentes
+import Nav from "./Nav";
+import useTools from "../hooks/useTools";
+
 const Header = () => {
+  const {isActiveHeader} = useTools()
+
   return (
-    <header className={styles.header}>
-      <div className={"contenedor "+styles.contenedor__header}>
-        <Link to="/" className={styles.logotipo}>
-            <img className={styles.logo} src={logo} alt="" />
-            <h1 className={styles.title} >PandaX {"/>"}</h1>
+    <header className={isActiveHeader ? styles.header_active : styles.header} id="header">
+      <div className={styles.header__contenedor}>
+        <Link to="/" className={styles.header__logotipo}>
+            <img className={styles.header__logo} src={logo} alt="PandaX logo Panda Rojo" />
+            <h1 className={styles.header__title} >PandaX<span className={styles.header__span}>/</span>{">"}</h1>
         </Link>
-        <nav className={styles.nav}>
-          <Link 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={styles.link} to="home">Home</Link>
-          <Link 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={styles.link} to="skills">Skills</Link>
-          <Link 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={styles.link} to="proyects">Proyects</Link>
-          <Link 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={styles.link} to="about">About Me</Link>
-          <Link 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={styles.link} to="blogs">Blogs</Link>
-          <Link 
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={styles.link} to="contact">Contact</Link>
-          <Nv
-          className={styles.link} to="/login">
-          <FontAwesomeIcon  icon={faUser} />
-          </Nv>
-        </nav>
+        <Nav />
       </div>
     </header>
   )

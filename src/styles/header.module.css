@@ -1,48 +1,80 @@
-.header{
+.header, .header_active{
     width: 100%;
+    height: auto;
    
     position: fixed;
     z-index: 1;
 
-    background-color: var(--ct--red--black);
+    background-color: var(--c--red--black);
     box-shadow: 0 5px 10px var(--c--red--black);
 
+    transition: .5s all ease;
 }
-.contenedor__header{
+
+
+.header__contenedor, .header_active .header__contenedor{
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 1em 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 0;
+
+    transition: .4s all ease;
 }
-.logotipo{
+
+.header__logotipo, .header_active .header__logotipo{
     display: flex;
     align-items: center;
     gap: 1em;
 }
-.logo{
-    color: aliceblue;
+
+.header__logo, .header_active .header__logo{
     width: 5em;
+    transition: .4s all ease;
 }
-.title{
+
+.header__title, .header_active .header__title{
     font-size: 2.5em;
     padding: 0;
-}
-.nav{
 
-}
-.link{
-    font-size: 1em;
-    padding: 1em;
-    transition: color .3s ease;
+    transition: .4s all ease;
 }
 
-.link:hover{
+.header__span{
+    margin: .2em; 
+}
+.header__logotipo:hover .header__span{
+    transition: 3s ease-in;
     color: var(--c--red--primary);
-    transition: .3s ease;
+}
+
+.header_active{
+    background-color: var(--ct--red--black);
+}
+.header_active .header__contenedor{
+    padding: .5em;
+    transition: .4s all ease;
+}
+
+.header_active .header__logo{
+    width: 3.4em;
+    transition: .4s all ease;
+}
+
+.header_active .header__title{
+    font-size: 2em;
+    padding: 0;
 }
 
 @media (max-width: 900px) {
     .contenedor__header{
        flex-direction: column;
+    }
+
+    .header__contenedor, .header_active .header__contenedor{
+
+        justify-content: center;
     }
 }
