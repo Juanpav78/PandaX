@@ -15,42 +15,56 @@
 .menu{
     display: none;
     font-size: 2em;
+    height: 1.5em;
+    width: 1.5em;
+}
+.menu:hover{
+    color: var(--c--red--primary);
+    transition: .3s color ease;
+}
+
+.menu svg{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .icon{
-    animation: change 1s ease;
+    animation: change .5s both;
 }
 
-@keyframes change {
-    0%{
-        transform: scale(1);
-    }
-
-    50%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1);
-    }
+.icon_active{
+    animation: changeR .5s both;
 }
+
+
 
 
 @media (max-width: 75em) {
 .nav{
     position: absolute;
-    background-color: rgba(246, 247, 246, 0);
-    top: 8.4em;
-    left: 0;
+    background-color: var(--ct--red--black);
+    top: 100%;
+    right: -100%;
+    width: 100%;
+    text-align: center;
     flex-direction: column;
+    animation: navClose .5s both;
+}
+
+.nav_active{
+    animation: navOpen .5s both;
 }
 
 .menu{
     display: block;
     border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 768px) {
 
     .menu{
         position: fixed;
@@ -60,9 +74,51 @@
         bottom: 1em;
         border-radius: 50%;
         padding: .5em;
-        background-color: aquamarine;
+        background-color: var(--c--red--black);
     }
+
     }
 
 
 
+@keyframes change {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes changeR {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes navClose{
+    0%{
+        right: 0;
+        opacity: 1;
+    }
+
+    100%{
+        right: -100%;
+        opacity: 0;
+    }
+}
+
+@keyframes navOpen{
+    0%{
+        right: -100%;
+        opacity: 0;
+    }
+
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+}

@@ -41,6 +41,10 @@ section, main{
   margin: 0 auto;
 }
 
+.n-a nav{
+  animation: none !important;
+}
+
 .title{
   font-size: 4em;
 }

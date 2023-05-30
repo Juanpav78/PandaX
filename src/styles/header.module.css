@@ -3,7 +3,7 @@
     height: auto;
    
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 
     background-color: var(--c--red--black);
     box-shadow: 0 5px 10px var(--c--red--black);
@@ -15,7 +15,7 @@
 .header__contenedor, .header_active .header__contenedor{
     max-width: 75em;
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 1em;
 
     display: flex;
     justify-content: space-between;
@@ -68,9 +68,10 @@
     padding: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .contenedor__header{
        flex-direction: column;
+       
     }
 
     .header__contenedor, .header_active .header__contenedor{

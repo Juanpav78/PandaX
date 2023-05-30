@@ -7,18 +7,27 @@ import { faUser, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(true)
+  const [isAnimation, setIsAnimation] = useState(false)
   const handleClick = ()=>{
-    if(isOpen == true){
-      setIsOpen(false)
-    }else{
-      setIsOpen(true)
+    
+    if(!isAnimation){
+      setIsAnimation(true)
+      setTimeout(()=>{
+        setIsAnimation(false)
+        document.getElementById("navbar")?.classList?.remove("n-a")
+        if(isOpen == true){
+          setIsOpen(false)
+        }else{
+          setIsOpen(true)
+        }
+      }, 200)
     }
-
-  }
+    }
+    
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbar + " n-a"} id="navbar">
 
-    <nav className={styles.nav}>
+    <nav className={isOpen ? styles.nav : styles.nav + " " + styles.nav_active} >
           <Link 
           spy={true}
           smooth={true}
@@ -64,9 +73,9 @@ const Nav = () => {
 
     <button className={styles.menu} onClick={handleClick}>
       {isOpen ? (
-        <FontAwesomeIcon className={styles.icon}  icon={faBars} />
+        <FontAwesomeIcon className={isAnimation ? styles.icon : styles.icon_active}  icon={faBars} />
       ):(
-        <FontAwesomeIcon className={styles.icon}  icon={faXmark} />
+        <FontAwesomeIcon className={isAnimation ? styles.icon : styles.icon_active}  icon={faXmark} />
       )}
     
     </button>
